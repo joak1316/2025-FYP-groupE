@@ -21,7 +21,14 @@ apply hair removal
 blackhat, thresh, img_out = removeHair(img_rgb, img_gray, kernel_size=10, threshold=2)
 
 
-Moving forward it was best to adjust and develop higher contrast in the image such that these hairs could be removed. 
+Moving forward it was best to adjust and develop higher contrast in the image such that these hairs could be removed.
+
+
+The pictures with marker often get more noise after being processed. The images become more blurry therefore, the lesions appear more faded and less distinguishable on the skin. One reason for this could be that the marker causes bias in the algorithm’s colour detection. It could be a possible way forward to tackle down this problem by training the algorithm to recognise the marker as well.
+A few examples for this error:
+- img_0630.png
+- img_0611.png
+- img_0551.png
 
 
 
