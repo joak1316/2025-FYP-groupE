@@ -32,8 +32,11 @@ A few examples for this error:
 
 
 One possible approach to fix this error is to first identify the color of the marker, which in this dataset most often appears as blck, blue and darkblue. Instead of converting the image to grayscale, we can convert it to HSV and define a suitable HSV range to distinguish the marked area. For blue markers, an effective range would be:
+
 Lower bound: [100, 150, 0]
+
 Upper bound: [140, 255, 255]
+
 Once the marker is detected, we can use the inpainting function to replace it with a background color that matches the person’s skin tone.
 
 However, a  when the lesion and the marker have similar colors, making it difficult for the algorithm to differentiate between them. In such cases, alternative methods can be explored, such as analyzing the shape and compactnes of both the lesion and the marker. Since lesions typically have irregular, compact shapes, whereas markers tend to form thin lines or non-circular patterns, we could use this distinction to identify and remove the marker while preserving the lesion.
